@@ -86,10 +86,10 @@ function flipCards() {
   }
 
   if (isGameOver(playerDeck)) {
-    text.innerText = "You Lose!!"
+    text.innerText = "You Lose!"
     stop = true
   } else if (isGameOver(computerDeck)) {
-    text.innerText = "You Win!!"
+    text.innerText = "You Win!"
     stop = true
   }
 }
