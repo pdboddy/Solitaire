@@ -1,0 +1,145 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+body {
+	color: #f2f2f2;
+	background-color: #808080;
+	margin: 0;
+	cursor: pointer;
+	justify-content: center;
+	padding-top: 1rem;
+	padding-left: 1rem;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(9, 4rem);
+	grid-template-rows: 20rem 10rem;
+	gap: .5rem;
+}
+
+#p1 {grid-column: 2; grid-row: 1;}
+#p2 {grid-column: 3; grid-row: 1;}
+#p3 {grid-column: 4; grid-row: 1;}
+#p4 {grid-column: 5; grid-row: 1;}
+#p5 {grid-column: 6; grid-row: 1;}
+#p6 {grid-column: 7; grid-row: 1;}
+#p7 {grid-column: 8; grid-row: 1;}
+#p8 {grid-column: 3; grid-row: 1; margin-top: 1rem; z-index: 1;}
+#p9 {grid-column: 4; grid-row: 1; margin-top: 1rem; z-index: 1;}
+#p10 {grid-column: 5; grid-row: 1; margin-top: 1rem; z-index: 1;}
+#p11 {grid-column: 6; grid-row: 1; margin-top: 1rem; z-index: 1;}
+#p12 {grid-column: 7; grid-row: 1; margin-top: 1rem; z-index: 1;}
+#p13 {grid-column: 8; grid-row: 1; margin-top: 1rem; z-index: 1;}
+#p14 {grid-column: 4; grid-row: 1; margin-top: 2rem; z-index: 2;}
+#p15 {grid-column: 5; grid-row: 1; margin-top: 2rem; z-index: 2;}
+#p16 {grid-column: 6; grid-row: 1; margin-top: 2rem; z-index: 2;}
+#p17 {grid-column: 7; grid-row: 1; margin-top: 2rem; z-index: 2;}
+#p18 {grid-column: 8; grid-row: 1; margin-top: 2rem; z-index: 2;}
+#p19 {grid-column: 5; grid-row: 1; margin-top: 3rem; z-index: 3;}
+#p20 {grid-column: 6; grid-row: 1; margin-top: 3rem; z-index: 3;}
+#p21 {grid-column: 7; grid-row: 1; margin-top: 3rem; z-index: 3;}
+#p22 {grid-column: 8; grid-row: 1; margin-top: 3rem; z-index: 3;}
+#p23 {grid-column: 6; grid-row: 1; margin-top: 4rem; z-index: 4;}
+#p24 {grid-column: 7; grid-row: 1; margin-top: 4rem; z-index: 4;}
+#p25 {grid-column: 8; grid-row: 1; margin-top: 4rem; z-index: 4;}
+#p26 {grid-column: 7; grid-row: 1; margin-top: 5rem; z-index: 5;}
+#p27 {grid-column: 8; grid-row: 1; margin-top: 5rem; z-index: 5;}
+#p28 {grid-column: 8; grid-row: 1; margin-top: 6rem; z-index: 6;}
+#p29 {grid-column: 1; grid-row: 1;}
+#p30 {grid-column: 1; grid-row: 1; margin-top: 7.5rem;}
+#p31 {grid-column: 1; grid-row: 1; margin-top: 15rem;}
+#p32 {grid-column: 1; grid-row: 1; margin-top: 22.5rem;}
+#p33 {grid-column: 9; grid-row: 1;}
+#p34 {grid-column: 9; grid-row: 1; margin-top: 7.5rem;}
+
+.deck {
+	height: 7rem;
+	width: 100%;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	border-radius: .5rem;
+	color: white;
+	user-select: none;
+}
+
+.computer-deck {
+	background-color: green;
+}
+
+.player-deck {
+	background-color: blue;
+}
+
+.text {
+	grid-column: span 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+
+.card.red {
+	color: red;
+}
+
+.card.black {
+	color: black;
+}
+
+.card {
+	position: relative;
+	height: 7rem;
+	width: 100%;
+	border: 1px solid black;
+	background-color: white;
+	border-radius: .5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 4rem;
+	user-select: none;
+}
+
+.blankspace {
+	height: 7rem;
+	width: 100%;
+	border: 1px solid black;
+	background-color: #808080;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	border-radius: .5rem;
+	color: white;
+	user-select: none;
+}
+
+.card::before, .card::after {
+	position: absolute;
+	content: attr(data-value);
+	font-size: 1rem;
+}
+
+.card::before {
+	top: .5rem;
+	left: .5rem;
+}
+
+.card::after {
+	bottom: .5rem;
+	right: .5rem;
+	transform: rotate(180deg);
+}
+
+.img {
+	user-select: none;
+}
+
+footer {
+	grid-column: span 7;
+}
