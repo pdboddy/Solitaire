@@ -1,5 +1,8 @@
 import Deck from "./deck.js"
 
+const deck = new Deck()
+console.log(deck.cards)
+
 const CARD_VALUE_MAP = {
   "2": 2,
   "3": 3,
@@ -21,5 +24,3 @@ function startGame() {
 	const deck = new Deck()
 	deck.shuffle()
 }
-
-console.log(deck.cards)
