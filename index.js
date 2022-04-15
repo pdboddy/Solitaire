@@ -15,3 +15,11 @@ const CARD_VALUE_MAP = {
   K: 13,
   A: 14
 }
+
+startGame()
+function startGame() {
+	const deck = new Deck()
+	deck.shuffle()
+}
+
+console.log(deck.cards)
