@@ -16,9 +16,15 @@ const CARD_VALUE_MAP = {
   A: 14
 }
 
+const cardSlot01 = document.querySelector('.card-slot-01')
+
 startGame()
 function startGame() {
 	const deck = new Deck()
 	deck.shuffle()
 	console.log(deck.cards)
+	
+	const card01 = Deck.pop()
+	
+	cardSlot01.appendChild(card01.getHTML())
 }
