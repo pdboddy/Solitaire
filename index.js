@@ -24,7 +24,7 @@ function startGame() {
 	deck.shuffle()
 	console.log(deck.cards)
 	
-	const card01 = Deck.pop()
+	const card01 = deck.pop()
 	
 	cardSlot01.appendChild(card01.getHTML())
 }
