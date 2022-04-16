@@ -18,7 +18,7 @@ const CARD_VALUE_MAP = {
 
 document.addEventListener('click', () => {
 	flipCards()
-)}
+})
 
 const cardSlot01 = document.querySelector('.card-slot-01')
 
