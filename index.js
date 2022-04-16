@@ -16,6 +16,10 @@ const CARD_VALUE_MAP = {
   A: 14
 }
 
+document.addEventListener('click', () => {
+	flipCards()
+}
+
 const cardSlot01 = document.querySelector('.card-slot-01')
 
 startGame()
@@ -23,7 +27,9 @@ function startGame() {
 	const deck = new Deck()
 	deck.shuffle()
 	console.log(deck.cards)
-	
+}
+
+function flipCards() {
 	const card01 = deck.pop()
 	
 	cardSlot01.appendChild(card01.getHTML())
